@@ -46,7 +46,15 @@ export default function Home() {
         </Head>
 
         <main className={styles.main}>
-          <Container maxWidth="sm">
+          <Container
+            maxWidth="sm"
+            style={{
+              padding: 24,
+              backgroundColor: "gainsboro",
+              borderRadius: 12,
+              boxShadow: "0 2px 5px 1px rgb(64 60 67 / 16%)",
+            }}
+          >
             <h1>Place your booking</h1>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <TextField
@@ -55,7 +63,7 @@ export default function Home() {
                 label="First name"
                 variant="filled"
                 value={firstName}
-                handleChange={e => setFirstName(e.target.value)}
+                handleChange={(e) => setFirstName(e.target.value)}
               />
               <TextField
                 style={{ margin: 4 }}
@@ -63,7 +71,7 @@ export default function Home() {
                 label="Last name"
                 variant="filled"
                 value={lastName}
-                handleChange={e => setLastName(e.target.value)}
+                handleChange={(e) => setLastName(e.target.value)}
               />
               <Select
                 labelId="service"
